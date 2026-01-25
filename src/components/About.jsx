@@ -8,6 +8,7 @@ const getTechDetails = (name) => {
     if (lower.includes('react')) return { icon: Code2, color: 'text-neonCyan' };
     if (lower.includes('node') || lower.includes('next')) return { icon: Server, color: 'text-green-400' };
     if (lower.includes('html') || lower.includes('css')) return { icon: Globe, color: 'text-orange-500' };
+    if (lower.includes('mongo') || lower.includes('db')) return { icon: Database, color: 'text-emerald-400' };
     if (lower.includes('test')) return { icon: Wrench, color: 'text-yellow-400' };
     if (lower.includes('mobile')) return { icon: Smartphone, color: 'text-blue-400' };
     if (lower.includes('typescript') || lower.includes('javascript')) return { icon: Terminal, color: 'text-blue-300' };
