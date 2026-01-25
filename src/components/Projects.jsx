@@ -3,10 +3,12 @@ import Section from './Section'
 import { Folder, X, ExternalLink, Calendar, User } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+import { createPortal } from 'react-dom'
+
 const ProjectModal = ({ project, onClose }) => {
     if (!project) return null
 
-    return (
+    return createPortal(
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
 
@@ -65,7 +67,8 @@ const ProjectModal = ({ project, onClose }) => {
                     </div>
                 </div>
             </motion.div>
-        </div>
+        </div>,
+        document.body
     )
 }
 
