@@ -4,7 +4,7 @@
         "title": "Full Stack Developer & Team Lead",
         "email": "ubale.siddesh1997@gmail.com",
         "location": "Pune, India",
-        "summary": "Highly-skilled Full Stack Developer with 5+ years of experience in Java, React, React Native, Spring, and Node.js. Expert in managing client relationships and delivering scalable enterprise applications.",
+        "summary": "Highly-skilled Full Stack Developer with 5+ years of experience in React, React Native, and Node.js. Expert in managing client relationships and delivering scalable enterprise applications.",
         "links": {
             "github": "https://github.com",
             "linkedin": "https://linkedin.com"
@@ -16,7 +16,6 @@
         "Node.js",
         "Next.js",
         "TypeScript",
-        "Java Spring/Hibernate",
         "HTML5 Canvas/Anime.js",
         "Unit Testing (Selenium, PlayWright)"
     ],
@@ -85,9 +84,6 @@
             "duration": "Apr 2021 - July 2021",
             "desc": "Vendor services for utility service apps (Android/iOS) and admin portal website.",
             "tech": [
-                "Java Spring",
-                "Spring Boot",
-                "Hibernate",
                 "IBM DB2",
                 "Cordova",
                 "Android/iOS"

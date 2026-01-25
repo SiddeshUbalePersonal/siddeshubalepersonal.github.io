@@ -7,7 +7,6 @@ const getTechDetails = (name) => {
     const lower = name.toLowerCase();
     if (lower.includes('react')) return { icon: Code2, color: 'text-neonCyan' };
     if (lower.includes('node') || lower.includes('next')) return { icon: Server, color: 'text-green-400' };
-    if (lower.includes('java') || lower.includes('spring')) return { icon: Coffee, color: 'text-orange-400' };
     if (lower.includes('html') || lower.includes('css')) return { icon: Globe, color: 'text-orange-500' };
     if (lower.includes('test')) return { icon: Wrench, color: 'text-yellow-400' };
     if (lower.includes('mobile')) return { icon: Smartphone, color: 'text-blue-400' };
