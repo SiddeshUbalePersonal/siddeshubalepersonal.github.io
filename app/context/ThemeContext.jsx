@@ -17,10 +17,15 @@ export const ThemeProvider = ({ children }) => {
     useEffect(() => {
         const root = window.document.documentElement;
 
-        // Remove old theme class
-        root.classList.remove('light', 'dark');
-        // Add new theme class
-        root.classList.add(theme);
+        // Set data-theme attribute for CSS variables
+        root.setAttribute('data-theme', theme);
+
+        // Also toggle class for Tailwind dark mode if used
+        if (theme === 'dark') {
+            root.classList.add('dark');
+        } else {
+            root.classList.remove('dark');
+        }
 
         // Save to local storage
         localStorage.setItem('theme', theme);
