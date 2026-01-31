@@ -3,22 +3,55 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Default to Light Mode (Swiss Editorial) */
+    --color-bg: 240 240 240;
+    /* #f0f0f0 (Paper White) */
+    --color-surface: 255 255 255;
+    /* #ffffff */
+    --color-primary: 26 26 26;
+    /* #1a1a1a (Ink Black) */
+    --color-secondary: 82 82 82;
+    /* #525252 (Charcoal) */
+    --color-accent: 255 51 0;
+    /* #ff3300 (International Orange) */
+  }
+
+  .dark {
+    /* Dark Mode (Cyber Noir) */
+    --color-bg: 5 5 5;
+    /* #050505 (Void) */
+    --color-surface: 20 20 20;
+    /* #141414 */
+    --color-primary: 224 224 224;
+    /* #e0e0e0 (Hologram White) */
+    --color-secondary: 100 116 139;
+    /* #64748b (Slate) */
+    --color-accent: 204 255 0;
+    /* #ccff00 (Neon Lime) */
+  }
+
   body {
-    @apply bg-slate-950 text-white overflow-x-hidden;
+    @apply bg-bg text-primary transition-colors duration-500 ease-in-out;
   }
 }
+
+
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #0f172a; 
+  background: #0f172a;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #22d3ee; 
+  background: #22d3ee;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #0ea5e9; 
+  background: #0ea5e9;
 }

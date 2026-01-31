@@ -7,8 +7,16 @@ export default {
     theme: {
         extend: {
             colors: {
-                neonCyan: '#22d3ee',
-                electricPurple: '#a855f7',
+                // Semantic Colors (The "Shapeshifter" System)
+                primary: 'rgba(var(--color-primary) / <alpha-value>)',
+                secondary: 'rgba(var(--color-secondary) / <alpha-value>)',
+                bg: 'rgba(var(--color-bg) / <alpha-value>)',
+                surface: 'rgba(var(--color-surface) / <alpha-value>)',
+                accent: 'rgba(var(--color-accent) / <alpha-value>)',
+
+                // Keep direct access if needed for specific overrides
+                dark: '#050505',
+                light: '#f0f0f0',
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],

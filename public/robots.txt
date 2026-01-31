@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://siddeshubalepersonal.github.io/sitemap.xml

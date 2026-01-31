@@ -3,8 +3,10 @@ import SpotlightCard from './SpotlightCard'
 import { motion } from 'framer-motion'
 import { Code2, Smartphone, Server, Database, Coffee, Wrench, Globe, Terminal, Box } from 'lucide-react'
 
+// Helper to keep icon colors but ensure text is readable
 const getTechDetails = (name) => {
     const lower = name.toLowerCase();
+    // Keep colors for icons, they look good on both backgrounds
     if (lower.includes('react')) return { icon: Code2, color: 'text-neonCyan' };
     if (lower.includes('node') || lower.includes('next')) return { icon: Server, color: 'text-green-400' };
     if (lower.includes('html') || lower.includes('css')) return { icon: Globe, color: 'text-orange-500' };
@@ -36,16 +38,16 @@ const About = ({ data }) => {
             <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
                 {/* Image Side */}
                 <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-neonCyan to-electricPurple rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
-                    <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl transform transition-transform duration-500 group-hover:scale-[1.02]">
+                    <div className="absolute inset-0 bg-gradient-to-r from-accent to-purple-500 rounded-2xl blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
+                    <div className="relative rounded-2xl overflow-hidden border border-surface shadow-2xl transform transition-transform duration-500 group-hover:scale-[1.02]">
                         <img
                             src="./images/about-profile.jpg"
                             alt="About Siddesh"
-                            className="w-full h-auto object-cover"
+                            className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                         />
-                        {/* Glass Overlay on hover */}
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
-                            <span className="px-6 py-2 rounded-full border border-white/20 text-white bg-white/10 backdrop-blur-md">
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span className="px-6 py-2 rounded-full border border-bg/20 text-bg bg-primary backdrop-blur-md font-bold">
                                 Full Stack Wizard 🧙‍♂️
                             </span>
                         </div>
@@ -54,14 +56,14 @@ const About = ({ data }) => {
 
                 {/* Text Side */}
                 <div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-neonCyan to-electricPurple bg-clip-text text-transparent inline-block">
-                        About Me
+                    <h2 className="text-4xl md:text-5xl font-black mb-6 text-primary tracking-tight">
+                        ABOUT ME
                     </h2>
-                    <SpotlightCard className="p-6">
-                        <p className="text-gray-300 leading-relaxed text-lg">
+                    <SpotlightCard className="p-8 bg-surface/50 border-primary/5">
+                        <p className="text-secondary leading-relaxed text-lg font-medium">
                             {data.profile.summary}
                         </p>
-                        <p className="mt-4 text-gray-400">
+                        <p className="mt-4 text-secondary/80">
                             I specialize in building scalable, high-performance applications. With a strong foundation in both frontend and backend technologies, I bridge the gap between design and engineering.
                         </p>
                     </SpotlightCard>
@@ -70,10 +72,10 @@ const About = ({ data }) => {
 
             {/* Skills Section */}
             <div className="text-center mb-10">
-                <h3 className="text-3xl font-bold mb-4 text-white">
+                <h3 className="text-3xl font-bold mb-4 text-primary">
                     Tech Stack
                 </h3>
-                <div className="h-1 w-20 bg-neonCyan mx-auto rounded-full" />
+                <div className="h-1 w-20 bg-accent mx-auto rounded-full" />
             </div>
 
             <motion.div
@@ -90,20 +92,20 @@ const About = ({ data }) => {
 
                     return (
                         <motion.div key={index} variants={item}>
-                            <SpotlightCard className="h-full group hover:bg-white/10 transition-colors duration-300">
+                            <SpotlightCard className="h-full group bg-surface hover:bg-surface/80 transition-colors duration-300 border border-primary/5">
                                 <div className="p-6 flex flex-col items-center justify-center gap-4 relative z-10">
 
                                     {/* Icon Container */}
-                                    <div className={`p-4 rounded-xl bg-slate-950/50 border border-white/5 ${color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                                    <div className={`p-4 rounded-xl bg-bg border border-primary/5 ${color} shadow-sm group-hover:scale-110 transition-transform duration-300`}>
                                         <Icon size={32} />
                                     </div>
 
                                     <div className="text-center">
-                                        <h4 className="font-bold text-white text-lg mb-1 group-hover:text-neonCyan transition-colors">
+                                        <h4 className="font-bold text-primary text-lg mb-1 group-hover:text-accent transition-colors">
                                             {tech.trim()}
                                         </h4>
                                         {yearText && (
-                                            <span className="inline-block px-3 py-1 rounded-full text-xs font-mono bg-white/5 text-gray-400 border border-white/5">
+                                            <span className="inline-block px-3 py-1 rounded-full text-xs font-mono bg-bg text-secondary border border-primary/5">
                                                 {yearText}
                                             </span>
                                         )}
