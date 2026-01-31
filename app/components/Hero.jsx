@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, PlayCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
+import VideoModal from './VideoModal';
 
 const Hero = ({ data }) => {
     const { theme } = useTheme();
+    const [isVideoOpen, setIsVideoOpen] = useState(false);
 
     useGSAP(() => {
         const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -17,6 +20,12 @@ const Hero = ({ data }) => {
 
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-10 transition-all duration-[1500ms] ease-in-out">
+            <VideoModal
+                isOpen={isVideoOpen}
+                onClose={() => setIsVideoOpen(false)}
+                videoId="54iILBLv21A"
+            />
+
             {/* Dark Mode: Cinematic Left-Side Image Background */}
             <AnimatePresence>
                 {theme === 'dark' && (
@@ -65,13 +74,18 @@ const Hero = ({ data }) => {
                         {data.summary}
                     </p>
 
-                    <div className="hero-text flex gap-4">
+                    <div className="hero-text flex flex-wrap gap-4 justify-center md:justify-start">
                         <a href="#projects" className="px-8 py-4 rounded-none bg-primary text-bg font-bold hover:bg-accent hover:text-primary transition-all shadow-xl">
                             VIEW WORK
                         </a>
-                        <a href="#contact" className="px-8 py-4 rounded-none bg-transparent border-2 border-primary text-primary font-bold hover:bg-primary hover:text-bg transition-colors">
-                            CONTACT ME
-                        </a>
+
+                        <button
+                            onClick={() => setIsVideoOpen(true)}
+                            className="group px-8 py-4 rounded-none bg-accent/10 border-2 border-accent text-accent font-bold hover:bg-accent hover:text-bg transition-colors flex items-center gap-3"
+                        >
+                            <PlayCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                            WATCH INTRO
+                        </button>
                     </div>
                 </motion.div>
 
