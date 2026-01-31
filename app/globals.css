@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default Dark Mode */
+  --color-primary: 255 255 255;
+  --color-secondary: 161 161 170;
+  --color-bg: 5 5 5;
+  --color-surface: 24 24 27;
+  --color-accent: 139 92 246;
+}
+
+[data-theme='light'] {
+  --color-primary: 24 24 27;
+  --color-secondary: 82 82 91;
+  --color-bg: 250 250 250;
+  --color-surface: 228 228 231;
+  --color-accent: 99 102 241;
+}
+
+body {
+  color: rgb(var(--color-primary));
+  background: rgb(var(--color-bg));
+}

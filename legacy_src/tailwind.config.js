@@ -1,17 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
-        './app/**/*.{js,ts,jsx,tsx,mdx}',
-        './components/**/*.{js,ts,jsx,tsx,mdx}',
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         extend: {
             colors: {
+                // Semantic Colors (The "Shapeshifter" System)
                 primary: 'rgba(var(--color-primary) / <alpha-value>)',
                 secondary: 'rgba(var(--color-secondary) / <alpha-value>)',
                 bg: 'rgba(var(--color-bg) / <alpha-value>)',
                 surface: 'rgba(var(--color-surface) / <alpha-value>)',
                 accent: 'rgba(var(--color-accent) / <alpha-value>)',
+
+                // Keep direct access if needed for specific overrides
                 dark: '#050505',
                 light: '#f0f0f0',
             },

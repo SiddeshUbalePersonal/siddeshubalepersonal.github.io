@@ -1,0 +1,119 @@
+{
+    "profile": {
+        "name": "Siddesh Sandesh Ubale",
+        "title": "Full Stack Developer & Team Lead",
+        "email": "ubale.siddesh1997@gmail.com",
+        "location": "Pune, India",
+        "summary": "Highly-skilled Full Stack Developer with 5+ years of experience in React, React Native, and Node.js. Expert in managing client relationships and delivering scalable enterprise applications.",
+        "links": {
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com"
+        }
+    },
+    "skills": [
+        "React.js (5 Years)",
+        "React Native (4 Years)",
+        "Node.js",
+        "Next.js",
+        "MongoDB",
+        "TypeScript",
+        "HTML5 Canvas/Anime.js",
+        "Unit Testing (Selenium, PlayWright)"
+    ],
+    "experience": [
+        {
+            "company": "Kumowiz Technologies",
+            "role": "Full Stack Developer",
+            "period": "08/2021 - Present",
+            "details": "Leading hybrid mobile app and web development. Specializing in JS package development and Docker implementation."
+        },
+        {
+            "company": "NO Brain Solution",
+            "role": "Web & Hybrid Mobile App Developer",
+            "period": "01/2020 - 08/2021",
+            "details": "Full stack web development and hybrid mobile app delivery."
+        },
+        {
+            "company": "Raj Vidya Kendra (RVK)",
+            "role": "Voluntary IT Contributor",
+            "period": "Volunteer",
+            "details": "Contributed IT skills and technical expertise for social welfare initiatives. Supported the organization's digital presence and technical needs."
+        }
+    ],
+    "projects": [
+        {
+            "title": "Dgraph UI",
+            "role": "Frontend Engineer",
+            "duration": "Aug 2022 - Apr 2023",
+            "desc": "UI contribution for a distributed, open-source graph database designed for high scalability. Handled complex relationship visualizations.",
+            "tech": [
+                "React",
+                "Go",
+                "Unit Testing",
+                "Graph DB"
+            ],
+            "responsibilities": [
+                "Wrote code for new features in the Dgraph product.",
+                "Authored unit and integration tests for developed functionality.",
+                "Contributed to UI improvements supporting the cloud version of Dgraph.",
+                "Developed in-house JavaScript libraries for internal use.",
+                "Contributed to the Typhoon UI library."
+            ]
+        },
+        {
+            "title": "GiggleMusic",
+            "role": "Full Stack & Mobile Lead",
+            "duration": "Aug 2021 - Present",
+            "desc": "A comprehensive social media platform for musicians to network, find jobs, trade instruments, and sell concert tickets.",
+            "tech": [
+                "React Native",
+                "Node.js",
+                "MongoDB",
+                "React",
+                "Unit Testing"
+            ],
+            "responsibilities": [
+                "Managed the full project lifecycle from requirements to deployment on UAT and Production.",
+                "Developed features for job posting, instrument marketplace, and ticketing systems.",
+                "Led cross-functional teams and maintained daily client communication (MOM).",
+                "Enforced coding standards, performed code reviews, and executed test plans."
+            ]
+        },
+        {
+            "title": "SEB Cares (Sarawak Energy)",
+            "role": "Full Stack Developer",
+            "duration": "Apr 2021 - July 2021",
+            "desc": "Vendor services for utility service apps (Android/iOS) and admin portal website.",
+            "tech": [
+                "IBM DB2",
+                "Cordova",
+                "Android/iOS"
+            ],
+            "responsibilities": [
+                "Acted as liaison between Operations and IT for business requirement gathering.",
+                "Resolved server-side errors and existing bugs in the Admin Portal.",
+                "Managed deployment on UAT and Production environments.",
+                "Facilitated daily client synchronization and documentation handover."
+            ]
+        },
+        {
+            "title": "SPRINT (Hurix Digital)",
+            "role": "Frontend Developer",
+            "duration": "Dec 2019 - Apr 2021",
+            "desc": "Educational interactive slides for senior students focusing on critical concept understanding through complex animations.",
+            "tech": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "jQuery",
+                "Anime.js"
+            ],
+            "responsibilities": [
+                "Developed educational interactive modules with complex animations.",
+                "Managed delivery timelines and implemented story change requests.",
+                "Resolved defects and provided technical support.",
+                "Established coding standards and distributed work based on client meetings."
+            ]
+        }
+    ]
+}
