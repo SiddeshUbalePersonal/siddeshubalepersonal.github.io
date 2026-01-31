@@ -43,7 +43,7 @@ const About = ({ data }) => {
                         <img
                             src="./images/about-profile.jpg"
                             alt="About Siddesh"
-                            className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            className="w-full h-auto object-cover transition-all duration-500"
                         />
                         {/* Overlay */}
                         <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
