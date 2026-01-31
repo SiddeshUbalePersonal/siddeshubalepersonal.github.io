@@ -62,15 +62,15 @@ const Hero = ({ data }) => {
                     `}
                     transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
                 >
-                    <h1 className="hero-text text-5xl md:text-7xl lg:text-9xl font-black mb-6 tracking-tight text-primary">
+                    <h1 className="hero-text text-4xl md:text-6xl lg:text-8xl font-black mb-4 tracking-tight text-primary">
                         {data.name.toUpperCase()}
                     </h1>
 
-                    <h2 className="hero-text text-2xl md:text-4xl font-light text-accent mb-8 tracking-widest uppercase">
+                    <h2 className="hero-text text-xl md:text-3xl font-light text-accent mb-6 tracking-widest uppercase">
                         {data.title}
                     </h2>
 
-                    <p className={`hero-text text-secondary text-lg md:text-xl leading-relaxed max-w-2xl mb-10 font-medium ${theme === 'dark' ? 'ml-auto' : ''}`}>
+                    <p className={`hero-text text-secondary text-base md:text-lg leading-relaxed max-w-2xl mb-8 font-medium ${theme === 'dark' ? 'ml-auto' : ''}`}>
                         {data.summary}
                     </p>
 
