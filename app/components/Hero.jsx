@@ -81,10 +81,23 @@ const Hero = ({ data }) => {
 
                         <button
                             onClick={() => setIsVideoOpen(true)}
-                            className="group px-8 py-4 rounded-none bg-accent/10 border-2 border-accent text-accent font-bold hover:bg-accent hover:text-bg transition-colors flex items-center gap-3"
+                            className="group relative px-8 py-4 rounded-none border-2 border-accent text-accent font-bold hover:text-bg transition-colors flex items-center gap-3 overflow-hidden"
                         >
-                            <PlayCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                            WATCH INTRO
+                            {/* Base Background & Hover Effect */}
+                            <div className="absolute inset-0 bg-accent/10 group-hover:bg-accent transition-all duration-300" />
+
+                            {/* Continuous Attention Pulse */}
+                            <motion.div
+                                className="absolute inset-0 bg-accent/30"
+                                animate={{ opacity: [0, 0.5, 0] }}
+                                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                            />
+
+                            {/* Button Content */}
+                            <div className="relative z-10 flex items-center gap-3">
+                                <PlayCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                WATCH INTRO
+                            </div>
                         </button>
                     </div>
                 </motion.div>
